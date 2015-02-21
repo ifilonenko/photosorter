@@ -1,5 +1,4 @@
 Body = React.createClass
-
   render: ->
     React.DOM.div
       children: 'hello world'
