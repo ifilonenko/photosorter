@@ -1,9 +1,8 @@
 window.Body = React.createClass
   render: ->
-    console.log(@props.info)
     React.DOM.div
       children: 'hello world'
-    # React.DOM.img
-    #   src: @props.info.data[0].images[0].source
-    #   height: '960'
-    #   width: '540'
+    React.DOM.img
+      src: @props.info.data[4].images[0].source
+      height: '960'
+      width: '540'
