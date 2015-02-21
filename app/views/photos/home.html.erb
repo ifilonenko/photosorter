@@ -74,7 +74,7 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      url = 'https://graph.facebook.com/v2.2/me/photos?access_token=CAACEdEose0cBAJxZALoHJyAG2hZCkfmrTW5n0MxqcgST6TkYtXz7CXdhCrAdpnzgtsV55d7fVjZAkP5JucKwd4OHHYcjUDog2LWkYOZCZBZBADEdt3aD74gA23MlnMIvVepPuNVlS3daUvNvQwvmXJoTLK0hUlJh1SyrVLjlRYZBfQU7bVRXgo38TUasqDrZBZBowiy8ijq7bcEFc5pAuSRUZCSkTwu5lOlB4lh7Jt7JbV6QZDZD'
+      url = 'https://graph.facebook.com/v2.2/me/photos'
       _t = this
       $.get(url,
         function(resp) {
