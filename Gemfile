@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Setting up reactjs
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
+gem 'annotate', '~> 2.6.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
