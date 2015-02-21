@@ -11,6 +11,12 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+      url = 'https://graph.facebook.com/v2.2/me/photos?access_token=' + response.authResponse.accessToken
+      $.get(url,
+        function(resp) {
+          React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
+        }
+      )
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -55,12 +61,6 @@
 
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
-      url = 'https://graph.facebook.com/v2.2/me/photos?access_token=' + response.authResponse.accessToken
-      $.get(url,
-        function(resp) {
-          React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
-        }
-      )
     });
 
   };
@@ -94,6 +94,7 @@
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-
+<div id= "status">
+</div>
 <div id= "reactcontent">
 </div>
