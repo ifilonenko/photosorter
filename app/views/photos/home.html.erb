@@ -78,7 +78,7 @@
       _t = this
       $.get(url,
         function(resp) {
-          document.getElementById('status').innerHTML = JSON.stringify(resp);
+          React.renderComponent(Body(info: resp), document.getElementById('reactcontent'));
         }
       )
       console.log("holy shit this worked???");
@@ -89,7 +89,5 @@
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
-<div id="status">
-</div>
 <div id= "reactcontent">
 </div>
