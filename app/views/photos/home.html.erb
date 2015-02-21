@@ -56,12 +56,13 @@
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
       url = 'https://graph.facebook.com/v2.2/me/photos?access_token=' + response.authResponse.accessToken
-        $.get(url,
-          function(resp) {
-            React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
-          }
-        )
-  };
+      $.get(url,
+        function(resp) {
+          React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
+        }
+      )
+    })
+  }
 
   // Load the SDK asynchronously
   (function(d, s, id) {
