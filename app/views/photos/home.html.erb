@@ -61,8 +61,9 @@
           React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
         }
       )
-    })
-  }
+    });
+
+  };
 
   // Load the SDK asynchronously
   (function(d, s, id) {
@@ -78,7 +79,14 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log(JSON.stringify(response));
+      console.log(JSON.stringify(response.name));
+      // url = 'https://graph.facebook.com/v2.2/me/photos'
+      // _t = this
+      // $.get(url,
+      //   function(resp) {
+      //     React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
+      //   }
+      // )
       console.log("holy shit this worked???");
     });
   }
