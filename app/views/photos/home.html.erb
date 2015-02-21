@@ -78,7 +78,7 @@
       _t = this
       $.get(url,
         function(resp) {
-          React.renderComponent(Body(info: resp), document.getElementById('reactcontent'));
+          React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
         }
       )
       console.log("holy shit this worked???");
