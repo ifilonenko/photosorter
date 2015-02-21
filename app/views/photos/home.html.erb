@@ -78,7 +78,7 @@
       _t = this
       $.get(url,
         function(resp) {
-          document.getElementById('status').innerHTML = resp;
+          document.getElementById('status').innerHTML = JSON.stringify(resp);
         }
       )
       console.log("holy shit this worked???");
