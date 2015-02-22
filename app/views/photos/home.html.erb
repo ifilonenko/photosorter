@@ -18,7 +18,6 @@
       document.getElementById('url').innerHTML = url
       $.get(url,
         function(resp) {
-          console.log(JSON.stringify(resp));
           React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
         }
       )
