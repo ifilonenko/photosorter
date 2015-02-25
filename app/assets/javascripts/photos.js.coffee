@@ -27,19 +27,15 @@ window.Body = React.createClass
                     children: likes
             ]
     )
-
     React.DOM.div
+      className: 'bodyContainer'
       children: [
         React.DOM.div
-          className: 'logout'
-          children: 'Logout'
-        React.DOM.button
-          className: 'btn btn-primary'
-          children: 'Logout'
-          onClick: @logout
-      React.DOM.div
-        children: all_images
-
+          className: 'Block PadWidth Search'
+          children: 'Begin your photo-sorting experience by clicking login and watch all your photos get sorted under'
+        React.DOM.div
+          className: ''
+          children: all_images
       ]
 
 

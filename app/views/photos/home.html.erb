@@ -1,6 +1,4 @@
 <div id="fb-root"></div>
-<div id= "reactcontent">
-</div>
 <div id="url"></div>
 <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -15,7 +13,6 @@
       // Logged into your app and Facebook.
       testAPI();
       url = 'https://graph.facebook.com/v2.2/me/photos?access_token=' + response.authResponse.accessToken
-      document.getElementById('url').innerHTML = url
       $.get(url,
         function(resp) {
           React.renderComponent(Body({info: resp}), document.getElementById('reactcontent'));
@@ -95,8 +92,6 @@
     });
   }
 </script>
-
-<fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();">
-</fb:login-button>
-<div id= "status">
+<div class="fb-login-button" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+<div id= "reactcontent">
 </div>
