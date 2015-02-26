@@ -92,6 +92,7 @@
     });
   }
 </script>
-<div class="fb-login-button" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+<fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();" class="fb-login-button" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true">
+</fb:login-button>
 <div id= "reactcontent">
 </div>
