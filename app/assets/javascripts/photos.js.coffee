@@ -15,35 +15,35 @@ window.Body = React.createClass
     )
     images.sort((a, b) -> b.likes - a.likes)
     console.log(images)
-    # all_images = images.map((album) ->
-    #   likes = parseInt(album.likes.data.length)
-    #   src = album.images[0].source
-    #   React.DOM.div
-    #     className: 'Block PadWidth Tile SoundcloudPost'
-    #     children: 
-    #       React.DOM.div
-    #         className: 'PostContent'
-    #         children: [
-    #           React.DOM.img
-    #             className: 'PostImage'
-    #             src: src
-    #           React.DOM.span
-    #             className: 'PostEmbed'
-    #             children: 
-    #               React.DOM.i
-    #                 className: 'fa fa-thumbs-up'
-    #                 children: likes
-    #         ]
-    # )
+    all_images = images.map((album) ->
+      likes = parseInt(album.likes)
+      src = album.src
+      React.DOM.div
+        className: 'Block PadWidth Tile SoundcloudPost'
+        children: 
+          React.DOM.div
+            className: 'PostContent'
+            children: [
+              React.DOM.img
+                className: 'PostImage'
+                src: src
+              React.DOM.span
+                className: 'PostEmbed'
+                children: 
+                  React.DOM.i
+                    className: 'fa fa-thumbs-up'
+                    children: likes
+            ]
+    )
     React.DOM.div
       className: 'bodyContainer'
       children: [
         React.DOM.div
           className: 'Block PadWidth Search'
           children: 'Begin your photo-sorting experience by clicking login and watch all your photos get sorted under'
-        # React.DOM.div
-        #   className: ''
-        #   children: all_images
+        React.DOM.div
+          className: ''
+          children: all_images
       ]
 
 
