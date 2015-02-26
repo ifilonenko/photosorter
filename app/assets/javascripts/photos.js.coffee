@@ -7,7 +7,14 @@ window.Body = React.createClass
       if album["likes"] == undefined
         album["likes"] = {"data": []}
     )
-    all_images = @props.info.data.map((album) ->
+    images = @props.info.data.map((thing) ->
+      { 
+        likes: parseInt(thing.likes.data.length, 10)
+        src: thing.images[0].source
+      }
+    )
+    images.sort((a, b) -> b.likes - a.likes)
+    all_images = images.map((album) ->
       likes = parseInt(album.likes.data.length)
       src = album.images[0].source
       React.DOM.div
